@@ -1,0 +1,63 @@
+﻿@page
+@model             NuevoModel
+@{
+	ViewData["Title"] = "Alta socio";
+
+
+	<form action="" method="post">
+		<div>
+			<b>
+				<span>Nombre:</span>
+			</b>
+			<br>
+			<input name="nombre" type="text">
+		</div>
+
+		<br>
+
+		<div>
+			<b><span>Apellido:</span></b>
+			<br>
+			<input name="apellido" type="text">
+		</div>
+		<br>
+		<div>
+			<b>
+				<span>Documento:</span>
+			</b>
+			<br>
+			<input name="documento" type="number">
+			<br>
+		</div>
+		<br>
+		<div>
+			<b>
+				<span>Celular:</span>
+			</b>
+			<br>
+			<input name="celular" type="number">
+		</div>
+		<br>
+		<div>
+			<b>	<span>Email:</span></b>
+			<br>
+			<input name="email" type="text">
+		</div>
+		<br>
+		<div>
+			
+		</div>
+		<br />
+		<br />
+		<button class="btn btn-outline-success">Enviar</button>
+		<br />
+		<br />
+
+
+	</form>
+
+	<a href="Index">
+		<button class="btn btn-outline-secondary">Regresar</button>
+	</a>
+
+}

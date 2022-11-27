@@ -1,0 +1,33 @@
+﻿@page
+@model AltaSocios.Pages.DetalleModel
+@{
+    ViewData["Title"] = "Detalle socio";
+
+    <p>DATOS DEL SOCIO</p>
+
+    <b>Nombre:</b>
+
+    @Model.actual.nombre
+    <br />
+
+    <b>	Apellido:</b>
+    @Model.actual.apellido
+    <br />
+    <b>Documento:</b>
+    @Model.actual.Documento
+    <br />
+    <b>Celular:</b>
+    @Model.actual.Celular
+    <br />
+    <b>
+        Email:
+    </b>
+
+    @Model.actual.Email
+    <br />
+    <br />
+    <a href="Index">
+        <button class="btn btn-outline-secondary">Regresar</button>
+    </a>
+
+}

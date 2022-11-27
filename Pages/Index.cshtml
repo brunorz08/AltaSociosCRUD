@@ -1,0 +1,76 @@
+﻿@page
+@model AltaSocios.Pages.IndexModel
+@{
+	ViewData["Title"] = "Alta Socios";
+	var listado = Model.lista.obtenerSocios();
+
+	if (listado.Count == 0)
+	{
+		<p>No se encuentran socios cargados actualmente</p>
+	}
+	else
+	{
+
+
+		<table class="table">
+
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Codigo</th>
+					
+					<th scope="col"></th>
+					<th scope="col"></th>
+					<th scope="col"></th>
+
+
+				</tr>
+			</thead>
+
+
+			<tbody>
+				@{
+					foreach (var item in listado)
+					{
+						<tr>
+							<td>
+								@item.nombre
+							</td>
+
+							<td>
+								@item.apellido
+							</td>
+
+
+							<td>
+								@item.codigo
+							</td>
+
+							<td>
+								<a href="Detalle?codigo=@item.codigo">Detalle</a>
+							</td>
+
+							<td>
+								<a href="Editar?codigo=@item.codigo">Editar</a>
+							</td>
+
+							<td>
+								<a href="Borrar?codigo=@item.codigo">Borrar</a>
+							</td>
+
+							
+							
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+	}
+}
+<br />
+<a href="Nuevo">
+	<button class="btn btn-primary">Nuevo socio</button>
+</a>
+
+
